@@ -21,17 +21,17 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'auto-filter-bot-v3')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ['29441782'])
+API_HASH = environ['fcd2518e068b5a42cd8fa40bdb76302a']
+BOT_TOKEN = environ['6255291464:AAHmf1Ed9X7uv4ebUV_I4s_bIyAVVJ7Wc2I']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
-BROADCAST_CHANNEL = int(os.environ.get("BROADCAST_CHANNEL", ""))
-ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
-DB_URL = os.environ.get("DATABASE_URI", "")
+BROADCAST_CHANNEL = int(os.environ.get("BROADCAST_CHANNEL", "-1001754886821"))
+ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "6019216032").split())
+DB_URL = os.environ.get("DATABASE_URI", "mongodb+srv://thoppimoviebot:thoppimoviebot@thoppimoviebot.a3lj0ir.mongodb.net/?retryWrites=true&w=majority")
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST", True))
 
 # Admins, Channels & Users
@@ -42,22 +42,22 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('FORCES_SUB')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
 AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
-DEV_CHANNEL = "https://t.me/ZauteKm"
+DEV_CHANNEL = "https://t.me/rithikclicks"
 
 # MongoDB information
-DATABASE_URI = environ['DATABASE_URI']
-DATABASE_NAME = environ['DATABASE_NAME']
+DATABASE_URI = environ['mongodb+srv://thoppimoviebot:thoppimoviebot@thoppimoviebot.a3lj0ir.mongodb.net/?retryWrites=true&w=majority']
+DATABASE_NAME = environ['thoppimoviebot']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Messages
 default_start_msg = """
-**Hi, I'm [auto-filter-bot-v3](https://github.com/zautekm/auto-filter-bot-v3)**
+**Hi, I'm [THOPPI THE MOVIE BOT]**
 
 Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
 """
 START_MSG = environ.get('START_MSG', default_start_msg)
 
-FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
+FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "<b>Join [MALLU OTT RELEASE](https://t.me/mallu_ott_release) FOR NEW MOVIES</b>\n\n<code>{file_name}</code>\nSize{file_size}\n{file_caption}.")
 OMDB_API_KEY = environ.get("OMDB_API_KEY", "http://www.omdbapi.com/?i=tt3896198&apikey=4f08a979")
 if FILE_CAPTION.strip() == "":
     CUSTOM_FILE_CAPTION=None
