@@ -1,2 +1,2 @@
 worker: python3 bot.py
-web : 0
+web: python auto-filter-bot-v3/bot.py
